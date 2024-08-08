@@ -1,0 +1,78 @@
+.video {
+    width: 900px;
+    height: 650px;
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+}
+
+.landing .text {
+    margin-left: -100px;
+}
+
+.landing .text h1 {
+    color: #fff;
+    font-size: 64px;
+    margin-top: -30px;
+}
+
+.text h3 {
+    color: #fff;
+    margin: 0;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-align: center;
+    overflow: hidden; /* Ensure text is hidden until typing animation is complete */
+  }
+
+.landing .flags {
+    display: flex;
+    gap: 15px;
+}
+
+.landing .flags img {
+    width: 50px;
+}
+
+.landing .actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 26px;
+}
+
+.landing .actions .flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.landing .actions .flex .arrow-right {
+    background-color: #FF4D06;
+    padding: 5px;
+    border-radius: 50%;
+    color: #000;
+}
+
+.landing .actions a {
+    color: #69707E;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;
+    }
+
+    .landing .video {
+        width: 360px;
+        height: 360px;
+    }
+
+    .landing .text {
+        padding-left: 60px;
+    }
+}

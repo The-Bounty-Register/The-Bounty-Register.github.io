@@ -1,0 +1,141 @@
+.features-section {
+    margin-bottom: 100px;
+}
+
+/* Base styles for text */
+.features-section .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.features-section .text h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 46px;
+}
+
+.features-section .text span, .text p {
+    color: #69707E;
+    margin: 0;
+}
+
+.features-section .text a {
+    color: #FF4D06;
+}
+
+.features-section .text img {
+    width: 30px;
+}
+
+/* Base styles for images */
+.features-section .images {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin: 60px auto 0;
+    width: fit-content;
+    align-items: center;
+}
+
+.features-section .images img {
+    width: 600px;
+}
+
+.features-section .images div:first-child {
+    display: flex;
+    gap: 200px;
+}
+
+.features-section .images .img-text {
+    position: relative;
+}
+
+.features-section .images .img-text h3 {
+    position: absolute;
+    color: #fff;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .features-section .images div:first-child {
+        gap: 100px;
+    }
+
+    .features-section .images img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 992px) {
+    .features-section .text h1 {
+        font-size: 36px;
+    }
+
+    .features-section .images {
+        gap: 100px;
+    }
+
+    .features-section .images img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section .text {
+        margin-bottom: 10px;
+    }
+
+    .features-section .text h1 {
+        font-size: 28px;
+    }
+
+    .features-section .text img {
+        width: 25px;
+    }
+
+    .features-section .images {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .features-section .images div:first-child {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .features-section .images img {
+        width: 100%;
+    }
+
+    .features-section .images .img-text h3 {
+        font-size: 18px;
+        top: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section .text h1 {
+        font-size: 24px;
+    }
+
+    .features-section .text img {
+        width: 20px;
+    }
+
+    .features-section .images img {
+        width: 100%;
+    }
+
+    .features-section .images .img-text h3 {
+        font-size: 16px;
+        top: 50%;
+    }
+}

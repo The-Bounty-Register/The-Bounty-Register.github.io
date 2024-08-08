@@ -1,0 +1,59 @@
+.how-it-works {
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.how-it-works .box {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-it-works .box-1 {
+  background-color: #ffc107;
+}
+.how-it-works .box-2 {
+  background-color: #dc3545;
+}
+.how-it-works .box-3 {
+  background-color: #28a745;
+}
+
+.rabbit-hole {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.lam-functionality {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.privacy-section {
+  background-color: #000;
+  color: #00ff00;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.teach-mode {
+  background-color: #3a3a3a;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.teach-mode video {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
