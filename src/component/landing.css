@@ -19,13 +19,14 @@
 }
 
 .text h3 {
-    color: #fff;
+    color: #69707E;
     margin: 0;
     margin-top: -20px;
     margin-bottom: 10px;
     font-size: 36px;
-    text-align: center;
-    overflow: hidden; /* Ensure text is hidden until typing animation is complete */
+    text-align: left;
+    overflow: hidden; 
+    font-weight: bolder;
   }
 
 .landing .flags {
@@ -41,6 +42,7 @@
     margin-top: 20px;
     display: flex;
     gap: 26px;
+    align-items: center;
 }
 
 .landing .actions .flex {

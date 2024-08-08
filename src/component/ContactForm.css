@@ -1,11 +1,16 @@
 .page-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 50px;
   min-height: 70vh;
   align-items: center;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  .page-container {
+    flex-direction: column;
+  }
 }
 
 .content {
@@ -24,8 +29,6 @@ p {
 
 .form-container {
   max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
   background-color: #000; /* Background color black */
   color: #fff; /* Text color white */
   font-family: Arial, sans-serif;

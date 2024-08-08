@@ -5,6 +5,7 @@ import video from '../imgs/video.mp4';
 import UAE from "../imgs/UAE.png";
 import UK from "../imgs/UK.png";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { Link } from 'react-router-dom';
 
 const textVariants = {
   hidden: { opacity: 0 },
@@ -23,8 +24,10 @@ const Landing = () => {
 
   useEffect(() => {
     let index = 0;
-    let direction = 1; // 1 for typing, -1 for deleting
-    const typingSpeed = 100; // Adjust typing speed here
+    let direction = 1;
+    const typingSpeed = 145; 
+
+
     const interval = setInterval(() => {
       if (direction === 1) {
         // Typing
@@ -37,7 +40,7 @@ const Landing = () => {
         // Deleting
         setDisplayedText(fullText.slice(0, index - 1));
         index -= 1;
-        if (index === 0) {
+        if (index === 1) {
           direction = 1;
         }
       }
@@ -65,8 +68,8 @@ const Landing = () => {
           <img src={UK} alt="UK flag" />
         </div>
         <div className='actions'>
-          <a href="#book">Book a Demo</a>
-          <a href="#contact" className='flex'>Contact Us <ArrowForwardIcon className='arrow-right'/></a>
+          <Link to="/book">Book a Demo</Link>
+          <Link to="/contact" className='flex'>Contact Us <ArrowForwardIcon className='arrow-right'/></Link>
         </div>
       </div>
     </div>
