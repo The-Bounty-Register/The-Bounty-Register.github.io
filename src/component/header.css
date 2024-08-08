@@ -16,6 +16,10 @@
     gap: 20px;
 }
 
+.nav-links ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 .menu-btn {
     display: none;

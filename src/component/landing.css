@@ -67,6 +67,7 @@
 @media (max-width: 768px) {
     .landing {
         flex-direction: column;
+        margin-bottom: 50px;
     }
 
     .landing .video {
@@ -76,5 +77,9 @@
 
     .landing .text {
         padding-left: 60px;
+    }
+
+    .text h3 {
+        font-size: 26px;
     }
 }

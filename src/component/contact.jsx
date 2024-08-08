@@ -45,12 +45,7 @@ const ContactPage = () => {
             <input type="email" id="email" name="email" placeholder="email" />
 
             <label htmlFor="reason">how can we help?</label>
-            <select id="reason" name="reason">
-              <option value="">select a reason</option>
-              <option value="support">Support</option>
-              <option value="feedback">Feedback</option>
-              <option value="inquiry">General Inquiry</option>
-            </select>
+            <input type="text" id="help" name="help" placeholder="how can we help?" />
 
             <input type="file" id="file" name="file" className="file-input" />
             <label htmlFor="file" className="file-label">
