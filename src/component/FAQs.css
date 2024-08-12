@@ -6,33 +6,41 @@
     font-family: 'Arial', sans-serif;
   }
   
-  .faqs h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
+.faqs h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #696969;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.faq-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-title span {
+  font-size: 2.2rem;
+}
+
+.add-icon {
+  color: #FF4500;
+}
+
+.faq-content {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: #848282;
+}
   
-  .faq-item {
-    border-bottom: 1px solid #696969;
-    padding: 10px 0;
-    cursor: pointer;
+
+@media (min-width: 760px) {
+  .faqs {
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  
-  .faq-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .faq-title span {
-    font-size: 2.2rem;
-  }
-  
-  .add-icon {
-    color: #FF4500;
-  }
-  
-  .faq-content {
-    margin-top: 10px;
-    font-size: 1.3rem;
-  }
-  
+}

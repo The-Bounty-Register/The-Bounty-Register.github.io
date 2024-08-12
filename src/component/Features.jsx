@@ -13,8 +13,8 @@ const FeatureSection = () => {
         <h1>FitMeIn</h1>
         <span>Powerd By</span>
         <img src={logo} alt="" />
-        <p>a personalized operating system through <br />a natural language interface.</p>
-        <a href="#logo">Learn More</a>
+        <p>A technology house based in United Kingdom</p>
+        <a href="/about">Learn More</a>
       </div>
       <div className="images">
         <div>

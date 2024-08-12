@@ -26,7 +26,7 @@ const AboutUs = () => {
         <motion.h1
           variants={itemVariants}
         >
-          learning human actions <br /> on computer applications
+          Empowering gyms to <br /> revolutionise member experience
         </motion.h1>
       </motion.div>
       <motion.div
@@ -43,9 +43,27 @@ const AboutUs = () => {
         <motion.p
           variants={itemVariants}
         >
-          Our mission is to bridge the gap between human actions and computer applications by creating intuitive and accessible technology solutions. We aim to improve user experience through innovative design and functionality.
+          At The Bounty Register our mission is to tranform fitness with FitMeIn empowering gyms accross the globe to solve issues that every member faces.
         </motion.p>
       </motion.div>
+      <motion.div
+        className='section'
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h2
+          variants={itemVariants}
+        >
+          Our Vision
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+        >
+          Our vision is to redifine gym interactions and disrupt the way people use gym now. We see a world where booking machines to workout is as standard as booking movie tickets.
+        </motion.p>
+      </motion.div>
+
       <motion.div
         className='section'
         variants={containerVariants}
@@ -60,7 +78,7 @@ const AboutUs = () => {
         <motion.p
           variants={itemVariants}
         >
-          We are a team of dedicated professionals with diverse backgrounds and expertise. Our team works collaboratively to bring the best solutions to life. Meet the passionate individuals behind our success.
+          We are a team of dedicated professionals with diverse backgrounds in software engineering, consultancy and data science.
         </motion.p>
       </motion.div>
     </div>

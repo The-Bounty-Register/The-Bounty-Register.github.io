@@ -19,13 +19,13 @@ const textVariants = {
 };
 
 const Landing = () => {
-  const fullText = "workouts revolutionised";
+  const fullText = "workouts revolutionised.";
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
     let index = 0;
     let direction = 1;
-    const typingSpeed = 145; 
+    const typingSpeed = 200 ; 
 
 
     const interval = setInterval(() => {
@@ -38,11 +38,10 @@ const Landing = () => {
         }
       } else {
         // Deleting
-        setDisplayedText(fullText.slice(0, index - 1));
-        index -= 1;
-        if (index === 1) {
-          direction = 1;
-        }
+        setDisplayedText("");
+        // setTimeout(2000);
+        index = 1
+        direction = 1
       }
     }, typingSpeed);
 
@@ -56,20 +55,22 @@ const Landing = () => {
       </div>
       <div className="text">
         <h1>FitMeIn</h1>
-        <motion.h3
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <span>{displayedText}</span>
-        </motion.h3>
+        <div className='animationText'>
+          <motion.h3
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <span>{displayedText}</span>
+          </motion.h3>
+        </div>
+        
         <div className="flags">
           <img src={UAE} alt="UAE flag" />
           <img src={UK} alt="UK flag" />
         </div>
         <div className='actions'>
-          <Link to="/book">Book a Demo</Link>
-          <Link to="/contact" className='flex'>Contact Us <ArrowForwardIcon className='arrow-right'/></Link>
+          <Link to="/contact" className='flex'>Contact us to book a demo<ArrowForwardIcon className='arrow-right'/></Link>
         </div>
       </div>
     </div>

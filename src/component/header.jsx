@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <a href="#home" className="logo">
+      <a href="/" className="logo">
         <img src={logo} alt="logo" className="logo-img" />
       </a>
 

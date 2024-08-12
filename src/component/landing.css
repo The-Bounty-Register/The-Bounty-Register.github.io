@@ -1,21 +1,22 @@
 .video {
-    width: 900px;
-    height: 650px;
+    width: 800px;
+    height: auto;
 }
 
 .landing {
     display: flex;
     align-items: center;
-}
-
-.landing .text {
-    margin-left: -100px;
+    margin-left: 200px;
 }
 
 .landing .text h1 {
     color: #fff;
     font-size: 64px;
     margin-top: -30px;
+}
+
+.animationText {
+    height: 50px;
 }
 
 .text h3 {
@@ -68,6 +69,7 @@
     .landing {
         flex-direction: column;
         margin-bottom: 50px;
+        margin-left: 0px;
     }
 
     .landing .video {
@@ -75,9 +77,6 @@
         height: 360px;
     }
 
-    .landing .text {
-        padding-left: 60px;
-    }
 
     .text h3 {
         font-size: 26px;
