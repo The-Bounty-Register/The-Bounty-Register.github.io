@@ -51,7 +51,7 @@ const Landing = () => {
   return (
     <div className="landing">
       <div className="video-container">
-        <video src={video} loop autoPlay muted className="video" />
+        <img src={video} alt="tablet video" loop autoPlay muted className="video" />
       </div>
       <div className="text">
         <h1>FitMeIn</h1>
