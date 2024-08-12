@@ -27,6 +27,7 @@
 }
 
 @media (max-width: 768px) {
+    
     .menu-btn {
         display: block;
     }
@@ -39,7 +40,7 @@
     .header .nav-links.active {
         display: block;
         position: absolute;
-        background-color: #161A23;
+        background-color: #000;
         padding: 10px;
         border-radius: 5px;
         top: 0;
