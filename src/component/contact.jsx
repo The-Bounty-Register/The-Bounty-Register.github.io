@@ -38,19 +38,25 @@ const ContactPage = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <form>
-            <label htmlFor="name">name</label>
-            <input type="text" id="name" name="name" placeholder="full name" />
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Full name" />
 
-            <label htmlFor="email">email address</label>
-            <input type="email" id="email" name="email" placeholder="email" />
+            <label htmlFor="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email" />
 
-            <label htmlFor="reason">how can we help?</label>
-            <input type="text" id="help" name="help" placeholder="how can we help?" />
+            <label htmlFor="who">Who Are You?</label>
+            <select id="who" name="who">
+              <option value="gym_member">Gym Member</option>
+              <option value="gym_owner">Gym Owner</option>
+            </select>
 
-            <input type="file" id="file" name="file" className="file-input" />
+            <label htmlFor="help">How Can We Help?</label>
+            <textarea id="help" name="help" placeholder="How can we help?" rows="5"></textarea>
+
             <label htmlFor="file" className="file-label">
-              attach or submit relevant files
+              Attach or Submit Relevant Files
             </label>
+            <input type="file" id="file" name="file" className="file-input" />
 
             <button type="submit">Submit</button>
           </form>
