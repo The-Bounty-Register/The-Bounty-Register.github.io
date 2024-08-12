@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './landing.css';
-import video from '../imgs/video.mp4';
+import video from '../imgs/video.gif';
 import UAE from "../imgs/UAE.png";
 import UK from "../imgs/UK.png";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
