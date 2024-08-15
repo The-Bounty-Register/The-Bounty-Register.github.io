@@ -60,6 +60,10 @@ select {
   color: #fff;
 }
 
+textarea {
+  background-color: #222;
+}
+
 select {
   cursor: pointer;
 }
