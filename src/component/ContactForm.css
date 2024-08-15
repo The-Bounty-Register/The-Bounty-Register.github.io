@@ -49,6 +49,8 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
+.message,
 select {
   padding: 10px;
   margin-bottom: 10px;
