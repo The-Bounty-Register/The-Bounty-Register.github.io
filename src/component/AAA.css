@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.box h1 {
+  font-size: 60px;
+}
+
 .how-it-works .box-1 {
   background-color: #ffc107;
 }
