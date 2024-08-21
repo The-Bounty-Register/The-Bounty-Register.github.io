@@ -1,0 +1,38 @@
+.gray-bg {
+    background: url('../imgs/tablet3.png') no-repeat center center;
+    height: 87vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gray-bg h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 3.3rem;
+    z-index: 1; /* Ensure text is above background */
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.section p {
+    font-size: 18px;
+    color: #848282;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+}
