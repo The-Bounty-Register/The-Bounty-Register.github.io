@@ -1,22 +1,25 @@
 .video {
-    width: 800px;
+    width: 1000px;
     height: auto;
 }
 
 .landing {
     display: flex;
     align-items: center;
-    margin-left: 200px;
+    justify-content: center;
+    height: 100vh;
+    position: sticky;
 }
+
 
 .landing .text h1 {
     color: #fff;
-    font-size: 64px;
-    margin-top: -30px;
+    font-size: 70px;
 }
 
 .animationText {
     height: 50px;
+    width: 600px;
 }
 
 .text h3 {
@@ -28,7 +31,7 @@
     text-align: left;
     overflow: hidden; 
     font-weight: bolder;
-  }
+}
 
 .landing .flags {
     display: flex;
@@ -70,6 +73,10 @@
         flex-direction: column;
         margin-bottom: 50px;
         margin-left: 0px;
+    }
+
+    .text {
+        width: 310px;
     }
 
     .landing .video {

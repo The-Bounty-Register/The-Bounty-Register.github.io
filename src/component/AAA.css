@@ -3,15 +3,22 @@
   text-align: center;
 }
 
-.how-it-works .box {
-  display: inline-block;
-  width: 100%;
+.box {
+  width: 100vw!important;
   height: 100vh;
   color: #fff;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  position: sticky;
+  display: flex;
+  top: 0;
+  box-shadow: 20px 10px 100px rgba(0, 0, 0, 1.0);
+  transition: 1.0s ease-in-out
+}
+
+.box-inner {
+  padding: 10%;
+  text-align: center;
 }
 
 .box h1 {
@@ -26,38 +33,4 @@
 }
 .how-it-works .box-3 {
   background-color: #28a745;
-}
-
-.rabbit-hole {
-  background-color: #000;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.lam-functionality {
-  background-color: #000;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.privacy-section {
-  background-color: #000;
-  color: #00ff00;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.teach-mode {
-  background-color: #3a3a3a;
-  color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.teach-mode video {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
 }
