@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './ContactForm.css';
 import Header from './header';
 import Footer from './footer';
+import Iphone from './Iphone';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +44,7 @@ const ContactPage = () => {
           email: '',
           phone: '',
           company: '',
-          message: ''
+          message: '',
         });
         setTimeout(() => setSubmitted(false), 5000);
       } else {
@@ -70,18 +71,10 @@ const ContactPage = () => {
           className="content"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
+          style={{position: 'sticky'}}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <h1>Contact Us</h1>
-          <p>
-            We're here to help and answer any questions you might have. We look forward to hearing from you.
-          </p>
-          <p>
-            Please fill out the form below to get in touch with us. Include as much detail as possible to help us assist you better.
-          </p>
-          <p>
-            Our team will get back to you as soon as possible. Thank you for reaching out to us!
-          </p>
+          <Iphone />
         </motion.div>
 
         <motion.div

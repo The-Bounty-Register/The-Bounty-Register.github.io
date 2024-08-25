@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './landing.css';
-import video from '../imgs/video.gif';
 import UAE from "../imgs/UAE.png";
 import UK from "../imgs/UK.png";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
+import CanvasAnimation from './CanvasAnimation';
 
 const textVariants = {
   hidden: { opacity: 0 },
@@ -51,7 +51,7 @@ const Landing = () => {
   return (
     <div className="landing">
       <div className="video-container">
-        <img src={video} alt="tablet video" loop autoPlay muted className="video" />
+        <CanvasAnimation />
       </div>
       <div className="text">
         <h1>FitMeIn</h1>
