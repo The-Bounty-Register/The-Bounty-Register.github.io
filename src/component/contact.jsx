@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import './ContactForm.css';
 import Header from './header';
 import Footer from './footer';
-import Iphone from './Iphone';
+import IPhone from './Iphone';
+// import IPhone from './iphone14Demo/IPhone';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -25,36 +26,6 @@ const ContactPage = () => {
   };
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('https://formspree.io/f/xovalebg', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-      
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          message: '',
-        });
-        setTimeout(() => setSubmitted(false), 5000);
-      } else {
-        console.error('Error submitting form');
-      }
-
-    } catch (error) {
-      console.error('Error submitting form', error);
-    }
-  };
 
 
 
@@ -74,7 +45,7 @@ const ContactPage = () => {
           style={{position: 'sticky'}}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <Iphone />
+          <IPhone />
         </motion.div>
 
         <motion.div
@@ -83,7 +54,7 @@ const ContactPage = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <form name='contactus-form' onSubmit={handleSubmit}>
+          <form name='contactus-form'>
             <label htmlFor="name">name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} placeholder="full name" />
 

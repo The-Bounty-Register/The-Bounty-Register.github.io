@@ -2,187 +2,11 @@ $(function(){
   const globalState = {
     apps: [
       {
-        name: 'Calendar',
-        icon: '../Icons/Calendar.png',
-        type: 'widgetFull',
-        dynamic: true
-      },
-      {
         name: 'FitMeIn',
         icon: '../Icons/FitMeIn.png',
         type: 'app',
         dynamic: false
-      },
-      {
-        name: 'Weather',
-        icon: '../Icons/Weather.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'FaceTime',
-        icon: '../Icons/FaceTime.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Calendar',
-        icon: '../Icons/Calendar.png',
-        type: 'app',
-        dynamic: true
-      },
-      {
-        name: 'Clock',
-        icon: '../Icons/Clock.png',
-        type: 'app',
-        dynamic: true
-      },
-      {
-        name: 'Photos',
-        icon: '../Icons/Photos.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Maps',
-        icon: '../Icons/GoogleMaps.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Camera',
-        icon: '../Icons/Camera.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Reminders',
-        icon: '../Icons/Reminders.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Facebook',
-        icon: '../Icons/Facebook.png',
-        type: 'app',
-        notifications: 5,
-        dynamic: false
-      },
-      {
-        name: 'Notes',
-        icon: '../Icons/Notes.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'App Store',
-        icon: '../Icons/AppStore.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Health',
-        icon: '../Icons/Health.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Message',
-        icon: '../Icons/iOsMessage.png',
-        notifications: 123,
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Settings',
-        icon: '../Icons/Settings.png',
-        type: 'app',
-        notifications: 3,
-        dynamic: false
-      },
-      {
-        name: 'Apple Store',
-        icon: '../Icons/AppleStore.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Calculator',
-        icon: '../Icons/Calculator.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Twitter',
-        icon: '../Icons/Twitter.png',
-        type: 'app',
-        notifications: 2,
-        dynamic: false
-      },
-      {
-        name: 'Messenger',
-        icon: '../Icons/Messenger.png',
-        notifications: 3,
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Compass',
-        icon: '../Icons/Compass.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Google',
-        icon: '../Icons/Google.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Music',
-        icon: '../Icons/AppleMusic.png',
-        type: 'app',
-        dynamic: false
-      },
-      
-      {
-        name: 'Voice Memos',
-        icon: '../Icons/VoiceMemos.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Wallet',
-        icon: '../Icons/Wallet.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Podcasts',
-        icon: '../Icons/Podcasts.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Files',
-        icon: '../Icons/Files.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'Contacts',
-        icon: '../Icons/Contacts.png',
-        type: 'app',
-        dynamic: false
-      },
-      {
-        name: 'YouTube',
-        icon: '../Icons/YouTube.png',
-        notifications: 1,
-        type: 'app',
-        dynamic: false
-      },
-	  
+      }
     ],
     wrapperApps: {
       appsGroup: 24,
@@ -271,14 +95,14 @@ $(function(){
       let today = config.date.getDate();
       let firstDay = new Date(config.date.getFullYear(), config.date.getMonth(), 0).getDay();
       this.append(`
-<div class="month">
-<p class="monthName">${month}</p>
-<div class="calendarTable">
-<div class="tableHeader"></div>
-<div class="tableContent"></div>
-</div>
-</div>`
-                 );
+        <div class="month">
+        <p class="monthName">${month}</p>
+        <div class="calendarTable">
+        <div class="tableHeader"></div>
+        <div class="tableContent"></div>
+        </div>
+        </div>`
+      );
       let header = this.find('.month .tableHeader');
       let content = this.find('.month .tableContent');
       globalState.dateTime.days.map(day => header.append(`<div class="dayName">${config.fullDay ? day : day.charAt(0)}</div>`))
@@ -460,331 +284,36 @@ ${app.notifications ? `<div class="notification">${app.notifications}</div>` : '
     })
   }
   
-  //Camera App
-  function camera(){
-    if (!$('.cameraApp').length) {
+
+
+  // FitMeInApp
+  function fitMeIn() {
+    if (!$('.fitMeInApp').length) {
       $('.mainScreen').append(`
-<div class="cameraApp hidden">
-<div class="topBar">
-<div class="camIco flash">
-<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-<path d="M41 6L13 34h14.187L23 58l27.998-29.999H37L41 6z"></path>
-</svg>
-</div>
-<div class="camIco chevronUp">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<path d="M20 40l11.994-14L44 40"></path>
-</svg>
-</div>
-<div class="camIco circles">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<path d="M45 32a17 17 0 0 1-9.8 5.7M22 34.8a17 17 0 1 1 26.2-8.5"></path>
-<path d="M15.8 26.3a17 17 0 1 1-5.8 2.3"></path>
-<path d="M32 54a17 17 0 0 1-3.3-16m3.3-6a17 17 0 1 1 6 26.5"></path>
-</svg>
-</div>
-</div>
-<div class="cameraArea">
-<iframe src="../apps/Camera.html" style="width="290px" height="410px" scrolling="no""></iframe>
-</div>
-<div class="modesCamera">
-<div class="mode">SLO-MO</div>
-<div class="mode">VIDEO</div>
-<div class="mode active">PHOTO</div>
-<div class="mode">PORTRAIT</div>
-<div class="mode">PANO</div>
-</div>
-<div class="shutterArea">
-<div class="imgPreview" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/fotos-3cba1.appspot.com/o/selfie.jpg?alt=media&token=9b87b717-798c-4f37-88f7-b8442bf6655b);"></div>
-<div class="shutter"></div>
-<div class="toggleCam">
-<div class="camIco">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<path d="M54.741 28.14a23.002 23.002 0 0 1-39.088 19.124"></path>
-<path d="M9.065 33.62A23.008 23.008 0 0 1 31.917 8a22.934 22.934 0 0 1 16.262 6.732"></path>
-<path d="M2 24l7.065 9.619L18 26"></path>
-<path d="M62 38l-7.259-9.86L46 36"></path>
-</svg>
-</div>
-</div>
-</div>
-</div>`
-                             );
-      $('.cameraApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-          $('.statusBar').removeClass('onlyLed camActiv');
-        }
-      });
-    }
-	
-	//Time out Function for Camera App
-    setTimeout(function(){
-      $('.statusBar').addClass('onlyLed camActiv');
-	  
-      $('.cameraApp').removeClass('hidden');
-    }, 100)
-  }
-  // Music App
-  function music() {
-    if (!$('.musicApp').length) {
-      $('.mainScreen').append(`
-      <div class="musicApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe src="../apps/music-app/index.html" style="width="280px" height="540px""></iframe>
-			</div>
-		 </div>
-      </div>
-      `
-      );
-      $('.musicApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
-	//Time out Function for Music App
-    setTimeout(function () {
-      $('.musicApp').removeClass('hidden');
-    }, 100)
-  }
-  
-  //Maps App
-  function maps() {
-    if (!$('.mapsApp').length) {
-      $('.mainScreen').append(`
-        <div class="mapsApp hidden">
+        <div class="fitMeInApp hidden">
           <div class="appScreen">
-                <div class="contents">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3652151.2747342857!2d73.87389695!3d26.630739750000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1618039457657!5m2!1sen!2sin" width="280px" height="540px" paddingTop="0" allowfullscreen="" loading="eager"></iframe>
-                </div> 
+            <div class="contents">
+              <iframe src="../apps/FitMeIn/Index.html" style="width="280px" height="640px""></iframe>
+            </div>
           </div>
         </div>`
       );
-      $('.mapsApp').touchMov({
+      $('.fitMeInApp').touchMov({
         mov: 'y',
         movUp: function (e) {
           $(e.currentTarget).addClass('hidden');
         }
       });
     }
-	
-	//Time out Function for Maps App
-    setTimeout(function () {
-      $('.mapsApp').removeClass('hidden');
-    }, 100)
-  }
-  
-  //Google App
-  function google() {
-    if (!$('.googleApp').length) {
-      $('.mainScreen').append(`
-        <div class="googleApp hidden">
-          <div class="appScreen">
-                <div class="contents">
-                   <iframe src="https://www.google.com/search?igu=1" width="300px" height="570px"></iframe>
-                </div> 
-          </div>
-        </div>`
-      );
-      $('.googleApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
-	//Time out Function for Google App
-    setTimeout(function () {
-      $('.googleApp').removeClass('hidden');
-    }, 100)
-  }
-  
-  //Calculator App
-  function calculator() {
-    if (!$('.calculatorApp').length) {
-      $('.mainScreen').append(`
-        <div class="calculatorApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe src="../apps/Calculator.html" style="width="280px" height="640px""></iframe>
-			</div>
-		 </div>
-        </div>`
-      );
-      $('.calculatorApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
+
 	//Time out Function for Calculator App
     setTimeout(function () {
-      $('.calculatorApp').removeClass('hidden');
+      $('.fitMeInApp').removeClass('hidden');
     }, 100)
-  }
-  
-  //Weather App
-  function weather() {
-    if (!$('.weatherApp').length) {
-      $('.mainScreen').append(`
-        <div class="weatherApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-               <iframe src="../apps/weather-app-final/index.html" style="width="400px" height="600px" background-color="white""></iframe>
-			</div>
-		 </div>
-        </div>`
-      );
-      $('.weatherApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
-	//Time out Function for Weather App
-    setTimeout(function () {
-      $('.weatherApp').removeClass('hidden');
-    }, 100)
-  }
-  
-  //Message App
-  function message() {
-    if (!$('.messageApp').length) {
-      $('.mainScreen').append(`
-        <div class="messageApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe src="../apps/iMessage/imessage.html" style="width="400px" height="580px""></iframe>
-			</div>
-		 </div>
-        </div>`
-      );
-      $('.messageApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
-	//Time out Function for Message App
-    setTimeout(function () {
-      $('.messageApp').removeClass('hidden');
-    }, 100)
-  }
-  
-  //Contacts App
-  function contacts() {
-    if (!$('.contactsApp').length) {
-      $('.mainScreen').append(`
-        <div class="contactsApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe src="../apps/Contacts/Contacts.html" style="width="300px" height="600px""></iframe>
-			</div>
-		 </div>
-        </div>`
-      );
-      $('.contactsApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
-	//Time out Function for Contacts App
-    setTimeout(function () {
-      $('.contactsApp').removeClass('hidden');
-    }, 100)
-  }
-  
- 
-  //youTube App
-  function youTube() {
-    if (!$('.youTubeApp').length) {
-      $('.mainScreen').append(`
-        <div class="youTubeApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe width="290" height="550" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=0&mute=0&playlist=tgbNymZ7vqY&loop=1">
-</iframe>
-			</div>
-		 </div>
-        </div>`
-      );
-      $('.youTubeApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-    }
-	
-	//Time out Function for youTube App
-    setTimeout(function () {
-      $('.youTubeApp').removeClass('hidden');
-    }, 100)
+
   }
 
-  // Music App
-  function music_deck() {
-      $('.mainScreen').append(`
-      <div class="musicApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe src="../apps/music-app/index.html" style="width="280px" height="540px""></iframe>
-			</div>
-		 </div>
-      </div>
-      `
-      );
-      $('.musicApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-	
-	//Time out Function for Music App
-    setTimeout(function () {
-      $('.musicApp').removeClass('hidden');
-    }, 100)
-  }
- 
-  // Message App
-  function message_deck() {
-      $('.mainScreen').append(`
-        <div class="messageApp hidden">
-	     <div class="appScreen">
-            <div class="contents">
-	            <iframe src="../apps/iMessage/imessage.html" style="width="400px" height="580px""></iframe>
-			</div>
-		 </div>
-        </div>`
-      );
-      $('.messageApp').touchMov({
-        mov: 'y',
-        movUp: function (e) {
-          $(e.currentTarget).addClass('hidden');
-        }
-      });
-	
-	//Time out Function for Message App
-    setTimeout(function () {
-      $('.messageApp').removeClass('hidden');
-    }, 100)
-  }
+
   
   function renderUI(){
     paintApps(globalState.apps, $('.wrapperApps'), $('.wrapperDots'));
@@ -1103,6 +632,10 @@ ${app.notifications ? `<div class="notification">${app.notifications}</div>` : '
   
   $('body').on('click', '.app[data-app="appContacts"]', function () {
    contacts();
+  })
+
+  $('body').on('click', '.app[data-app="appFitMeIn"]', function () {
+    fitMeIn();
   })
   
   $('body').on('click', '.app[data-app="appMessage"]', function () {

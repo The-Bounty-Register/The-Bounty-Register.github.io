@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import images from "../data/landing_images";
 
-const CanvasAnimation = ({ frameRate = 25 }) => {
+const CanvasAnimation = ( {images, frameRate = 25 }) => {
     const canvasRef = useRef(null);
     const animationFrameIdRef = useRef(null);
     const [loadedImages, setLoadedImages] = useState([]);
@@ -61,7 +60,7 @@ const CanvasAnimation = ({ frameRate = 25 }) => {
         };
     }, [loadedImages, frameRate]);
 
-    return <canvas ref={canvasRef} width="1056" height="594" />;
+    return <canvas ref={canvasRef} className="video" width="1920" height="1080" />;
 };
 
 export default CanvasAnimation;

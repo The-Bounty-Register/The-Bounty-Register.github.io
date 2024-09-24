@@ -7,7 +7,7 @@ const Iphone = () => {
                 <iframe 
                     src="/pages/iPhone12(iOs 14).html"
                     title="iphone"
-                    style={{height:'750px', width:'500px', position: 'sticky'}}
+                    style={{height:'750px', border: 'none', width:'500px', position: 'sticky'}}
                 ></iframe>
             </div>
         </div>

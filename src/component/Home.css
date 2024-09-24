@@ -1,0 +1,28 @@
+.sloganSection {
+    display: flex;
+    width: 100%;
+}
+
+.animationContent {
+    width: 60%;
+}
+
+.sloganContent {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.sloganContent h1 {
+    color: white;
+    font-size: 70px;
+}
+
+
+#side {
+    width: 100%;
+    height: auto;
+}

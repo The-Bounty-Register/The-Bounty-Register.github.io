@@ -1,7 +1,17 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, LinkedIn, YouTube } from '@mui/icons-material';
 import "./footer.css"
+import { Link, useLocation } from 'react-router-dom';
+
+
 const Footer = () => {
+
+  const location = useLocation();
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? 'active' : '';
+  };
+
   return (
     <div className="footer">
       <div className="icons">
@@ -11,15 +21,16 @@ const Footer = () => {
       </div>
 
       <div className="links">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
+        <ul>
+          <li><Link to="/" className={getLinkClass('/')}>FitMeIn</Link></li>
+          <li><Link to="/about" className={getLinkClass('/about')}>About Us</Link></li>
+          <li><Link to="/aaa" className={getLinkClass('/aaa')}>AAA</Link></li>
+          <li><Link to="/contact" className={getLinkClass('/contact')}>Contact Us</Link></li>
+        </ul>
       </div>
 
       <div className="copyrights">
-        © {new Date().getFullYear()} Your Company. All rights reserved.
+        © {new Date().getFullYear()} The Bounty Register. All rights reserved.
       </div>
     </div>
   );

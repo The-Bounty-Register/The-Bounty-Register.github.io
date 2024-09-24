@@ -6,6 +6,7 @@ import UK from "../imgs/UK.png";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from 'react-router-dom';
 import CanvasAnimation from './CanvasAnimation';
+import images from '../data/images';
 
 const textVariants = {
   hidden: { opacity: 0 },
@@ -51,7 +52,7 @@ const Landing = () => {
   return (
     <div className="landing">
       <div className="video-container">
-        <CanvasAnimation />
+        <CanvasAnimation images={images.landing_images} frameRate={25}/>
       </div>
       <div className="text">
         <h1>FitMeIn</h1>

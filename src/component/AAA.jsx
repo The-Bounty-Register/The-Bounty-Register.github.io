@@ -23,12 +23,14 @@ function AAA() {
               <p>Once the advanced allocation algorithm has done its job, the automated booking system will book the appropriate machines at the gym for the specified time!</p>
             </div>
           </div>
+
           <div className="box box-3">
             <div className='box-inner'>
               <h1>Iterative Feedback Loop</h1>
-              <p>There is a profile for every user with their prefered machines workout styles, this information is used to power the AAA!</p>
+              <p></p>
             </div>
           </div>
+
         </div>
       </section>
 
