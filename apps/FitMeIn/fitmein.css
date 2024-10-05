@@ -1,0 +1,32 @@
+body {
+    background-color: #292929;
+    margin: 0!important;
+    height: 100%;
+}
+
+#loginScreen {
+    height: 90vh;
+}
+
+.tbrLogo {
+    width: 45px;
+    height: auto;
+}
+
+.headingSection {
+    text-align: center;
+    height: 40vh;
+    color: white;
+}
+
+.loginSectionWrapper {
+    display : flex;
+    justify-content: center;
+}
+
+.loginSection {
+    width: 90%;
+    height: 40vh;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+}
