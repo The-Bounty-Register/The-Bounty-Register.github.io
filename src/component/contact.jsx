@@ -103,7 +103,7 @@ const ContactPage = () => {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <form
-            action="https://formspree.io/f/xpwzadge"
+            action="https://formspree.io/f/mqakzqrl"
             method="POST"
             name="contactus-form"
             onSubmit={handleSubmit}
