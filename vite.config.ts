@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/the-bounty-register.github.io/" : "/", // 👈 Add this line
+  base: mode === "production" ? "/" : "/", // 👈 Add this line
 
   server: {
     host: "::",
