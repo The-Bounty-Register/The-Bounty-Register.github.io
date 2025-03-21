@@ -71,7 +71,7 @@ const SolutionSection = () => {
             className="order-2 lg:order-1 relative fade-in-hidden"
           >
             <div className="absolute -inset-1 bg-gradient-to-r from-fitBlue/30 to-blue-400/30 rounded-3xl blur-xl opacity-70"></div>
-            <div className="relative overflow-hidden rounded-3xl border border-white/10">
+            {/* <div className="relative overflow-hidden rounded-3xl border border-white/10">
               <div className="relative pb-[177.78%]">
                 <div className="absolute inset-0 bg-fitDark-medium">
                   <div className="absolute top-0 left-0 w-full h-10 bg-fitDark-light flex items-center px-4 space-x-2">
@@ -110,7 +110,11 @@ const SolutionSection = () => {
                   </div>
                 </div>
               </div>
+            </div> */}
+            <div className='relative overflow-hidden rounded-3xl border border-white/10'>
+              <iframe src="https://demo.thebountyregister.com" width="100%" height="900px"></iframe>
             </div>
+            
           </div>
 
           <div className="order-1 lg:order-2">
