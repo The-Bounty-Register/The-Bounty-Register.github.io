@@ -3,6 +3,9 @@ import React from 'react';
 import { DumbbellIcon, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
+
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-fitDark border-t border-white/5 py-12 px-6">
       <div className="max-w-6xl mx-auto">
@@ -51,7 +54,7 @@ const Footer = () => {
           </div>
           
           <div className="text-sm text-muted-foreground">
-            © 2023 FitMeIn. All rights reserved.
+            © {currentYear} The Bounty Register LTD. All rights reserved.
           </div>
         </div>
       </div>
