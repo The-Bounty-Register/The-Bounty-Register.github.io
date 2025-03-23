@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { DumbbellIcon, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -45,12 +45,10 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap justify-center md:justify-start gap-6 mb-4 md:mb-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">About</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Features</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Pricing</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Contact</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/about" className="text-sm text-muted-foreground hover:text-white transition-colors">About</Link>
+            <a href="/#benefits" className="text-sm text-muted-foreground hover:text-white transition-colors">Benefits</a>
+            <a href="/#contact" className="text-sm text-muted-foreground hover:text-white transition-colors">Contact</a>
+            <Link to="/terms" className="text-sm text-muted-foreground hover:text-white transition-colors">Terms of Service</Link>
           </div>
           
           <div className="text-sm text-muted-foreground">

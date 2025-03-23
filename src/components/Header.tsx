@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { DumbbellIcon, MenuIcon, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +28,32 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Helper function to handle section navigation
+  const handleSectionNavigation = (sectionId: string) => {
+    if (isHomePage) {
+      // If already on homepage, just scroll to the section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // If on another page, navigate to homepage with the section hash
+      navigate(`/#${sectionId}`);
+    }
+    
+    // Close mobile menu if open
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header 
       className={cn(
@@ -34,28 +64,40 @@ const Header = () => {
       )}
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto">
-        <a href="#" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <DumbbellIcon className="h-8 w-8 text-fitBlue" />
           <span className="font-bold text-xl">FitMeIn</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#problem" className="text-sm font-medium hover:text-fitBlue transition-colors">
+          <button 
+            onClick={() => handleSectionNavigation("problem")} 
+            className="text-sm font-medium hover:text-fitBlue transition-colors"
+          >
             The Problem
-          </a>
-          <a href="#solution" className="text-sm font-medium hover:text-fitBlue transition-colors">
+          </button>
+          <button 
+            onClick={() => handleSectionNavigation("solution")} 
+            className="text-sm font-medium hover:text-fitBlue transition-colors"
+          >
             Our Solution
-          </a>
-          <a href="#benefits" className="text-sm font-medium hover:text-fitBlue transition-colors">
+          </button>
+          <button 
+            onClick={() => handleSectionNavigation("benefits")} 
+            className="text-sm font-medium hover:text-fitBlue transition-colors"
+          >
             Benefits
-          </a>
-          <a 
-            href="#contact" 
+          </button>
+          <Link to="/about" className="text-sm font-medium hover:text-fitBlue transition-colors">
+            About Us
+          </Link>
+          <button 
+            onClick={() => handleSectionNavigation("contact")} 
             className="px-5 py-2 bg-fitBlue rounded-full text-white text-sm font-medium hover:bg-fitBlue/90 transition-all button-shine"
           >
             Contact Us
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -80,34 +122,37 @@ const Header = () => {
         )}
       >
         <nav className="flex flex-col space-y-6 items-center">
-          <a 
-            href="#problem" 
+          <button 
+            onClick={() => handleSectionNavigation("problem")}
             className="text-xl font-medium"
-            onClick={() => setMobileMenuOpen(false)}
           >
             The Problem
-          </a>
-          <a 
-            href="#solution" 
+          </button>
+          <button 
+            onClick={() => handleSectionNavigation("solution")}
             className="text-xl font-medium"
-            onClick={() => setMobileMenuOpen(false)}
           >
             Our Solution
-          </a>
-          <a 
-            href="#benefits" 
+          </button>
+          <button 
+            onClick={() => handleSectionNavigation("benefits")}
+            className="text-xl font-medium"
+          >
+            Benefits
+          </button>
+          <Link 
+            to="/about" 
             className="text-xl font-medium"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Benefits
-          </a>
-          <a 
-            href="#contact" 
+            About Us
+          </Link>
+          <button 
+            onClick={() => handleSectionNavigation("contact")}
             className="px-8 py-3 mt-4 bg-fitBlue rounded-full text-white text-lg font-medium button-shine"
-            onClick={() => setMobileMenuOpen(false)}
           >
             Contact Us
-          </a>
+          </button>
         </nav>
       </div>
     </header>
