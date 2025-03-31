@@ -190,7 +190,7 @@ const CTASection = () => {
                       disabled={isSubmitting}
                       className="w-full px-6 py-3 bg-fitBlue rounded-lg text-white font-medium hover:bg-fitBlue/90 transition-all flex items-center justify-center button-shine"
                     >
-                      {isSubmitting ? 'Sending...' : 'Request Info'}
+                      {isSubmitting ? 'Sending...' : 'Request a Demo'}
                       <Send className="ml-2 h-4 w-4" />
                     </Button>
                   </form>
