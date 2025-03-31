@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { DumbbellIcon, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { DumbbellIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -10,36 +10,9 @@ const Footer = () => {
     <footer className="bg-fitDark border-t border-white/5 py-12 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-          <div className="flex items-center space-x-3 mb-6 md:mb-0">
+          <div className="flex items-center space-x-3">
             <DumbbellIcon className="h-8 w-8 text-fitBlue" />
             <span className="font-bold text-xl">FitMeIn</span>
-          </div>
-          
-          <div className="flex space-x-6">
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-fitDark-medium flex items-center justify-center transition-all hover:bg-fitBlue/20"
-            >
-              <Instagram className="h-5 w-5 text-white" />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-fitDark-medium flex items-center justify-center transition-all hover:bg-fitBlue/20"
-            >
-              <Facebook className="h-5 w-5 text-white" />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-fitDark-medium flex items-center justify-center transition-all hover:bg-fitBlue/20"
-            >
-              <Twitter className="h-5 w-5 text-white" />
-            </a>
-            <a 
-              href="#" 
-              className="w-10 h-10 rounded-full bg-fitDark-medium flex items-center justify-center transition-all hover:bg-fitBlue/20"
-            >
-              <Linkedin className="h-5 w-5 text-white" />
-            </a>
           </div>
         </div>
         
